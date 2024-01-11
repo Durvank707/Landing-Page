@@ -1,13 +1,62 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.navbar {
+    background-color: #010203;
+}
+
+.nav-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-logo h2{
+    color: white;
+    margin-left: 50px;
+}
+
+.nav-logo a{
+    text-decoration: none;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    width: 800px;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.nav-list li{
+    color: white; ;
+}
+
+.nav-list a{
+    text-decoration: none;
+}
+.nav-button button{
+    width: 70px;
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+.nav-button button:hover{
+    background-color: grey
+    ;
 }
