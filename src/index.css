@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -12,51 +12,104 @@ code {
         monospace;
 }
 
-.navbar {
-    background-color: #010203;
-}
-
-.nav-main {
+nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #1b2430;
 }
 
-.nav-logo h2{
+.nav-logo h2 {
     color: white;
-    margin-left: 50px;
+    margin: 0;
 }
 
-.nav-logo a{
-    text-decoration: none;
-}
-
-.nav-list{
-    display: flex;
+.nav-comp ul {
     list-style: none;
-    text-decoration: none;
-    width: 800px;
-    justify-content: space-between;
-    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-list li{
-    color: white; ;
+.nav-comp ul a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: white;
+    font-size: 1.3rem;
 }
 
-.nav-list a{
-    text-decoration: none;
+.ham {
+    display: none;
 }
-.nav-button button{
-    width: 70px;
+
+.ham i {
+    color: white;
+}
+
+.nav-comp button {
+    margin: 0 50px;
+    width: 100px;
     height: 40px;
-    margin-top: 15px;
-    margin-right: 20px;
-    border-radius: 15px;
-    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
-.nav-button button:hover{
-    background-color: grey
-    ;
+
+.nav-comp button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width:769px) {
+    .nav-comp ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 34px;
+        right: -3000px;
+        width: 300px;
+        height: 100vh;
+        background-color: #2a3239;
+        padding: 40px 0 0 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-comp.active ul {
+        right: 0px;
+    }
+
+    .nav-comp.active button {
+        margin: 0 20px;
+        margin-top: 50px;
+        width: 100px;
+        height: 40px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .nav-comp.active button:hover {
+        background-color: #45a049;
+    }
+
+    .nav-comp ul li {
+        margin-bottom: 25px;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .ham i {
+        font-size: 24px;
+        cursor: pointer;
+    }
 }

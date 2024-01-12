@@ -1,38 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
+import { SiYourtraveldottv } from "react-icons/si";
+
 
 const Navbar = () => {
 
+    const [click, setClick] = useState('false');
+
+    function clickHandler(){
+        setClick(!click); 
+    }
+
     return (
-    <div className='navbar'>
-        <nav className='nav-main'>
+    
+        <nav>
             <div className='nav-logo'>
-                <Link>
-                    <h2>Title</h2>
+                <Link to="/">
+                    <h2>
+                        <SiYourtraveldottv />
+                    </h2>
                 </Link>
             </div>
-            <div className='nav-comp'>
-                <ul className='nav-list'>
+            <div className={click ? 'nav-comp' : 'nav-comp active'}>
+                <ul>
                     <Link to='/' >
                         <li>Home</li>
                     </Link>
 
-                    <Link to='/'>
+                    <Link to='/services'>
                         <li>Services</li>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/products'>
                         <li>Products</li>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/aboutUs'>
                         <li>About Us</li>
-                    </Link>                    
+                    </Link>  
+
+                    <div >
+                        <button>Sign Up</button>
+                    </div>                  
                 </ul>
             </div>
-            <div className='nav-button'>
-                <button>Sign Up</button>
+
+            <div className='ham'>
+               <i onClick={clickHandler} className={click ? 'fas fa-bars' : 'fas fa-times'}></i>
             </div>
+
         </nav>
-    </div>
+
   )
 }
 
