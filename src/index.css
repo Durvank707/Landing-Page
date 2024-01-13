@@ -13,6 +13,7 @@ code {
 }
 
 nav {
+    z-index: 1;
     position: sticky;
     top: 0px;
     display: flex;
@@ -114,4 +115,64 @@ nav {
         font-size: 24px;
         cursor: pointer;
     }
+}
+
+.services {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 3rem;
+}
+
+.services-image {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.products {
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.products-image {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.signup {
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.signup-image {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100vh;
 }
