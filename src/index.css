@@ -13,6 +13,8 @@ code {
 }
 
 nav {
+    position: sticky;
+    top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +65,7 @@ nav {
     background-color: #45a049;
 }
 
-@media screen and (max-width:769px) {
+@media screen and (max-width:960px) {
     .nav-comp ul {
         display: flex;
         flex-direction: column;
